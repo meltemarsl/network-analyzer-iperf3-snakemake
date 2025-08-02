@@ -24,7 +24,7 @@ requirements.txt
 
 ---
 
-## Quick Start (Single Command)
+## Quick Start
 Run the entire workflow from server start to plot generation:
 ```bash
 python3 -m venv venv
