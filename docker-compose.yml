@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  iperf3-server:
+    image: networkstatic/iperf3
+    container_name: iperf3-server
+    command: ["iperf3", "-s"]
+    ports:
+      - "5201:5201"
+    restart: unless-stopped
+
+  iperf3-client:
+    build:
+      context: ./client
+    image: iperf3-client
+    volumes:
+      - ./results:/results
+
+  measurement-controller:
+    build:
+      context: ./measurement-controller
+    image: measurement-controller
+    volumes:
+      - ./results:/results
