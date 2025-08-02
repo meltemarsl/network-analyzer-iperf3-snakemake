@@ -8,8 +8,7 @@ This project runs an `iperf3` network performance test inside Docker containers,
 
 - **Docker** and **Docker Compose** installed
 - **Python 3.10+**
-- **Snakemake** (`pip install snakemake`)
-
+  
 ---
 
 ## Project Structure
